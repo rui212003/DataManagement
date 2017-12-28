@@ -40,8 +40,6 @@ public class login extends HttpServlet {
 			// JSPにフォワード
 						RequestDispatcher dispatcher = request
 								.getRequestDispatcher("/html/pages/input/inputList.jsp");
-						RequestDispatcher dispatcher2 = request
-								.getRequestDispatcher("/src/result.jsp");
 						dispatcher.forward(request, response);
 		} finally {
 			if (conn != null) {
