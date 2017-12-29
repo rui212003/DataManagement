@@ -15,7 +15,7 @@
 		<aside class="">
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
-				<h1>在庫一覧</h1>
+				<h1>在庫追加</h1>
 			</section>
 			<!-- Main content -->
 			<section class="content">
@@ -25,33 +25,13 @@
 						<div class="tab-content">
 							<form id="searchInput" name="searchInput" method="post">
 								<div class="row form-group">
-									<div class="col-md-2">
-										<input type="text" class="form-control" name="big_type" id="big_type" placeholder="大分類" />
+									<div class="col-md-4">
+										<input type="file"    name="csv読込む"/>
 									</div>
 									<div class="col-md-2">
-										<input type="text" class="form-control" name="middle_type" id="middle_type" placeholder="中分類" />
-									</div>
-									<div class="col-md-2">
-										<input type="text" class="form-control" name="small_type" id="small_type" placeholder="小分類" />
+										<input type="button"    value="保存"/>
 									</div>
 								</div>
-
-								<div class="row form-group">
-									<div class="col-md-6" id="sandbox-container">
-										<div class="input-daterange input-group" id="datepicker" style="width: 100%">
-											<div class="input-group-addon">
-												<i class="fa fa-calendar"></i>
-											</div>
-											<input type="text" class="form-control" name="bgnYmd" id="bgnYmd" placeholder="開始日付">
-											<span class="input-group-addon">〜</span>
-											<input type="text" class="form-control" name="endYmd" id="endYmd" placeholder="終了日付">
-										</div>
-									</div>
-									<div class="col-md-2">
-										<input type="button" id="master-location-confirm" class="btn btn-block btn-success" onclick="searchInputData()" value="検索">
-									</div>
-								</div>
-
 							</form>
 						</div>
 
@@ -94,28 +74,8 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			//The Calender
-			$('#sandbox-container .input-daterange').datepicker({
-				format : 'yyyy/mm/dd',
-				language : 'ja',
-				autoclose : true,
-				todayHighlight : true
-			});
+
 		});
-
-		//入庫検索
-		function searchInputData() {
-			//キーワード
-			var bigType = "化粧品";
-
-			$.post("/DataManagement/getInputData", {
-				"bigType" : bigType
-			}, function(data) {
-				//結果を表示する inputData
-
-			});
-
-		}
 	</script>
 
 </body>

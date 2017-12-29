@@ -4,8 +4,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<jsp:include page="../htmlframe/headFrame.jsp"></jsp:include>
-<jsp:include page="../htmlframe/headerFrame.jsp"></jsp:include>
+<jsp:include page="../../htmlframe/headFrame.jsp"></jsp:include>
+<jsp:include page="../../htmlframe/headerFrame.jsp"></jsp:include>
 <body class="skin-green">
 	<!-- header logo: style can be found in header.less -->
 
@@ -15,7 +15,7 @@
 		<aside class="">
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
-				<h1>在庫一覧</h1>
+				<h1>商品名称</h1>
 			</section>
 			<!-- Main content -->
 			<section class="content">
@@ -23,38 +23,36 @@
 				<div class="col-xs-12">
 					<div class="nav-tabs-custom">
 						<div class="tab-content">
-							<form id="searchInput" name="searchInput" method="post">
-								<div class="row form-group">
-									<div class="col-md-2">
-										<input type="text" class="form-control" name="big_type" id="big_type" placeholder="大分類" />
-									</div>
-									<div class="col-md-2">
-										<input type="text" class="form-control" name="middle_type" id="middle_type" placeholder="中分類" />
-									</div>
-									<div class="col-md-2">
-										<input type="text" class="form-control" name="small_type" id="small_type" placeholder="小分類" />
-									</div>
+							<div class="row">
+								<div class="col-md-2">
+									<select class="form-control" value="">
+										<option>大分類</option>
+										<option>化粧品</option>
+										<option>日用品</option>
+									</select>
 								</div>
-
-								<div class="row form-group">
-									<div class="col-md-6" id="sandbox-container">
-										<div class="input-daterange input-group" id="datepicker" style="width: 100%">
-											<div class="input-group-addon">
-												<i class="fa fa-calendar"></i>
-											</div>
-											<input type="text" class="form-control" name="bgnYmd" id="bgnYmd" placeholder="開始日付">
-											<span class="input-group-addon">〜</span>
-											<input type="text" class="form-control" name="endYmd" id="endYmd" placeholder="終了日付">
-										</div>
-									</div>
-									<div class="col-md-2">
-										<input type="button" id="master-location-confirm" class="btn btn-block btn-success" onclick="searchInputData()" value="検索">
-									</div>
+								<div class="col-md-2">
+									<select class="form-control" value="">
+										<option>中分類</option>
+										<option>資生堂</option>
+										<option>POLA</option>
+									</select>
 								</div>
+								<div class="col-md-2">
+									<select class="form-control" value="">
+										<option>小分類</option>
+										<option>CPB</option>
+										<option>悦薇</option>
+									</select>
+								</div>
+							</div>
 
-							</form>
 						</div>
-
+						<div class="tab-content">
+							<div class="col-md-2">
+								<input type="button"  class="btn btn-block btn-success"  value="新規追加">
+							</div>
+						</div>
 						<div class="tab-content">
 							<div class="tab-pane active" id="tab_1">
 								<table class="table table-hover valve-table">
@@ -66,11 +64,9 @@
 											<th>小分類</th>
 											<th>商品名</th>
 											<th>バーコード</th>
-											<th>数量</th>
 											<th>単位</th>
-											<th>円定価</th>
-											<th>入庫日付</th>
-											<th>追跡番号</th>
+											<th>定価(円)</th>
+											<th>売価額(元)</th>
 											<th>操作</th>
 										</tr>
 									</thead>

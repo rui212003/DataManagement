@@ -15,7 +15,7 @@
 		<aside class="">
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
-				<h1>在庫一覧</h1>
+				<h1>在庫追加</h1>
 			</section>
 			<!-- Main content -->
 			<section class="content">
@@ -67,10 +67,6 @@
 											<th>商品名</th>
 											<th>バーコード</th>
 											<th>数量</th>
-											<th>単位</th>
-											<th>円定価</th>
-											<th>入庫日付</th>
-											<th>追跡番号</th>
 											<th>操作</th>
 										</tr>
 									</thead>

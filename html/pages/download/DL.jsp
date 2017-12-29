@@ -15,7 +15,7 @@
 		<aside class="">
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
-				<h1>在庫一覧</h1>
+				<h1>ダウンロード</h1>
 			</section>
 			<!-- Main content -->
 			<section class="content">
@@ -54,23 +54,39 @@
 
 							</form>
 						</div>
-
+						<div class="panel-body">
+							<div class="col-md-2">
+								<form name="inputListPrint" action="#" method="post">
+									<input type="hidden" name="inputListPrintReport" id="inputListPrintReport" value="" />
+									<input type="submit" class="btn btn-default btn-success" onclick="submitForm()" value="入庫DL" />
+								</form>
+							</div>
+							<div class="col-md-2">
+								<form name="outputListPrint" action="#" method="post">
+									<input type="hidden" name="outputListPrintReport" id="outputListPrintReport" value="" />
+									<input type="submit" class="btn btn-default btn-success" onclick="submitForm()" value="出庫DL" />
+								</form>
+							</div>
+							<div class="col-md-2">
+								<form name="stockListPrint" action="#" method="post">
+									<input type="hidden" name="stockListPrintReport" id="stockListPrintReport" value="" />
+									<input type="submit" class="btn btn-default btn-success" onclick="submitForm()" value="在庫DL" />
+								</form>
+							</div>
+						</div>
 						<div class="tab-content">
 							<div class="tab-pane active" id="tab_1">
 								<table class="table table-hover valve-table">
 									<thead>
 										<tr>
+											<th><input type="checkbox" class="headCheckbox" onclick="selectAllItem()">(全選)</th>
 											<th>No</th>
 											<th>大分類</th>
 											<th>中分類</th>
 											<th>小分類</th>
 											<th>商品名</th>
 											<th>バーコード</th>
-											<th>数量</th>
 											<th>単位</th>
-											<th>円定価</th>
-											<th>入庫日付</th>
-											<th>追跡番号</th>
 											<th>操作</th>
 										</tr>
 									</thead>
