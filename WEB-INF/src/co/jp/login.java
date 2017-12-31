@@ -37,6 +37,7 @@ public class login extends HttpServlet {
 		Connection conn = null;
 		try {
 			System.out.println("Hello world");
+
 			// JSPにフォワード
 						RequestDispatcher dispatcher = request
 								.getRequestDispatcher("/html/pages/input/inputList.jsp");
